@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<title>Login or Register</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="validation.js"></script>
+
+</head>
+<body>
+
+<div class="hero">
+	<div
+		class="form-box">
+		<div class="button-box">
+			<div id="btn"></div>
+			
+			<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+			<button type="button" class="toggle-btn" onclick="register()">Register</button>
+            
+		</div>
+
+<!--why when putting the php file in action method it does not execute it?-->
+		<form name="loginForm" id="login" class="input-group" action="  login.php" method="POST" onsubmit="return checkLoginInputs()" >
+            
+			<input name="LoginEmail" id="emailL" type="text" class="input-field" placeholder="User Email" ><small id="emailLErr"></small>
+			
+			<input name="LoginPassword" id="passwordL" type="password" class="input-field" placeholder="Enter Password" ><small id="psswrdLErr"></small>
+			
+			<button type="submit" class="submit-btn" value="submit" onclick="checkLoginInputs()">Log in</button>	
+		</form>
+
+
+
+		<form name="registerForm" id="register" class="input-group" action="register.php" method="POST" onsubmit="return checkRegisterInputs()">
+            
+			<input name="RegUsrName" id="username" type="text" class="input-field" placeholder="User Name" />
+			<small id="usernameErr"></small>
+
+			<input name="RegEmail" id="email" type="email" class="input-field" placeholder="Enter an Email" />
+			<small id="emailErr"></small>
+
+			<input name="RegPassword" id="password" type="password" class="input-field" placeholder="Enter Password"/>
+			<small id="psswrdErr"></small>
+
+			<input name="RegPsswrd2" id="password2" type="password" class="input-field" placeholder="Confirm Password" />
+			<small id="psswrd2Err"></small>
+
+			<button id="registerBtn" type="submit" class="submit-btn" value="submit" onclick="checkRegisterInputs()" >Register</button>
+			
+		</form>
+
+	</div>
+
+</div>
+
+</body>
+</html>
